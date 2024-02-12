@@ -1,0 +1,62 @@
+.hero{
+    background-image: url('../assets/images/image-homepage-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px;
+    position: relative;
+}
+
+.heroDiv{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    height: 357px;
+    width: 445px;
+    background-color: $secondary-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: start;
+    gap: 30px;
+}
+
+.about{
+    display: flex;
+    justify-content: left;
+    gap: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+
+.avatar{
+    height: 500px;
+}
+
+.aboutContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    width: 380px;
+
+}
+
+hr{
+    width: 100%;
+    border: 1px solid $secondary-grey;
+}
+
+.contactBanner{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 100px;
+    h2{
+        max-width: 350px;
+    }
+    hr{
+        max-width: 534px;
+    }
+}
