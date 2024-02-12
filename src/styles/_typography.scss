@@ -1,0 +1,67 @@
+h1{ 
+    font-family: $ff-primary;
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: -0.446px;
+    font-weight: 700; 
+    color: $primary-grey;
+}
+
+h2{ 
+    font-family: $ff-primary;
+    font-size: 40px;
+    line-height: 42px;
+    letter-spacing: -0.357px;
+    font-weight: 700; 
+    color: $primary-grey;
+}
+h3{ 
+    font-family: $ff-primary;
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: -0.286px;
+    font-weight: 700; 
+    color: $primary-grey;
+}
+
+.body-1{
+    color: #33323D;
+    font-family: $ff-secondary;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.body-2{
+    color: #33323D;
+    font-family: $ff-secondary;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+//Layout component
+.navLink{
+    font-size: 12px;
+    font-family: $ff-secondary;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2px;
+    color: $primary-grey
+}
+
+.navLink:hover, .navLink:focus, .bottomNavLink:hover, .bottomNavLink:focus{
+    color: $primary-cyan;
+    cursor: pointer;
+}
+
+.bottomNavLink{
+    font-size: 12px;
+    font-family: $ff-secondary;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2px;
+    color: $secondary-white
+}
