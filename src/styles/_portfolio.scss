@@ -1,0 +1,39 @@
+.project_container{
+  height: 100vh;
+  background-color: red;
+}
+
+.banner{
+  margin: auto;
+  padding-bottom: 100px;
+}
+
+.columns{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.features{
+  color: $primary-cyan;
+}
+
+.leftColumn{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 350px;
+  padding-bottom: 100px;
+}
+
+.rightColumn{
+  max-width: 635px;
+  padding-bottom: 100px;
+  h3, p{
+    padding-bottom: 28px;
+  }
+}
+
+.static{
+  padding-bottom: 20px;
+}
