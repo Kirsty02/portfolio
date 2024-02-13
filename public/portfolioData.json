@@ -5,7 +5,7 @@
         "description": "The Audiophile e-commerce platform is a full-stack web application designed to provide a seamless online shopping experience for high-end audio equipment. The platform caters to audiophiles and music enthusiasts looking for quality headphones, speakers, earphones, and accessories. It combines a React.js frontend with an Express.js and Node.js backend and a MongoDB database for data storage.",
         "imagePreview": "/assets/images/audiophilePreview.png", 
         "imageBanner": "/assets/images/audiophileBanner.png",
-        "imageStatic1": "/assets/images/audiophileStatic3.png",
+        "imageStatic1": "/assets/images/audiophileStatic2.png",
         "imageStatic2": "/assets/images/audiophileStatic1.png",
         "technologies": ["React", "CSS", "JavaScript"],
         "projectLink": "https://github.com/Kirsty02/Audiophile"
