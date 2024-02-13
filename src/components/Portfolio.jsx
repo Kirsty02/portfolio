@@ -1,12 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import PortfolioItem from './PortfolioItem';
 
-const Portfolio = () => {
-    // Example portfolio data (you'd likely fetch this from an API)
-    const portfolioItems = [
-        { id: 1, title: 'Project 1', description: '...', image: 'project1.jpg' },
-        // ... more project data
-    ];
+
+const Portfolio = ({ portfolioItems }) => {
+
+
+    const navigate = useNavigate();
+
+    const gotoContact = () => {
+        navigate('/contact'); 
+    };
 
     return (
         <div className="portfolio">
@@ -15,6 +19,11 @@ const Portfolio = () => {
                 {portfolioItems.map(item => (
                     <PortfolioItem key={item.id} {...item} />
                 ))}
+            </div>
+            <div className='contactBanner'>
+                <h2> Interested in doing a project together?</h2> 
+                <hr></hr>
+                <button onClick={gotoContact} className='secondary-btn'>contact me </button>
             </div>
         </div>
     );
