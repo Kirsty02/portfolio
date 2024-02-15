@@ -2,7 +2,7 @@ import React, { useState, useEffect }  from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import downArrows from '../assets/icons/down-arrows.svg';
-import bannerImg from '../assets/images/image-homepage-hero.jpg';
+import bannerImg from '../assets/images/hero.jpg';
 
 
 const Home = () => {
