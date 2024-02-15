@@ -4,12 +4,15 @@ import { Link } from 'react-router-dom';
 
 const PortfolioItem = ({ title, description, imagePreview, id }) => {
     return (
-        <div className="portfolio-item about ">
-            <img src={imagePreview} alt={title} />
-            <div className='aboutContainer'>
+        <div className="portfolio-item">
+            <div className='imagePreview'>
+                <img src={imagePreview} alt={title} />
+            </div>
+            
+            <div className='itemContainer'>
                 <hr></hr>
                 <h3>{title}</h3>
-                <p>{description}</p>
+                <p className='body-2'>{description}</p>
                 <Link to={`/project/${id}`}> 
                     <button className="secondary-btn">VIEW PROJECT</button>
                 </Link>

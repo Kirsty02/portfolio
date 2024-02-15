@@ -2,6 +2,24 @@
     padding-top:50px;
 
 }
+
+
+.contact{
+  width: 100%;
+  padding:50px;
+  .columns{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    .rightColumn{
+      min-width: 100%;
+      padding-bottom: 50px;
+    }
+    .leftColumn{
+      min-width: 100%;
+    }
+  }
+}
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -29,6 +47,32 @@
     textarea:focus, input:focus{
         border-color: $primary-cyan !important;
     } 
+
+}
+
+
+@media(max-width: 800px){
+  .contact{
+    padding-bottom: 50px;
+    padding:10px;
+    
+    .columns{
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      gap:20px;
+      .rightColumn{
+        min-width: 100%;
+        padding-bottom: 50px !important;
+        
+      }
+      .leftColumn{
+        min-width: 100%;
+        padding-bottom: 30px !important;
+        
+      }
+    }
+  }
 
 }
 

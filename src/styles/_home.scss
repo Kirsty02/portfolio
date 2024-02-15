@@ -3,7 +3,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 600px;
+    min-height: 600px;
+    max-width: 1071px;
     position: relative;
 }
 
@@ -18,7 +19,8 @@
     flex-direction: column;
     justify-content: flex-end;
     align-content: start;
-    gap: 30px;
+    gap: 50px;
+   
 }
 
 .about{
@@ -29,17 +31,15 @@
     padding-bottom: 100px;
 }
 
-.about:nth-child(odd){
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: left;
-    gap: 100px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
+
 
 .avatar{
     height: 500px;
+    width: 400px;
+    background-image: url('../assets/images/image-homepage-profile.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .aboutContainer{
@@ -47,7 +47,7 @@
     flex-direction: column;
     align-items: start;
     justify-content: space-around;
-    width: 380px;
+    max-width: 380px;
 
 }
 
@@ -67,4 +67,88 @@ hr{
     hr{
         max-width: 534px;
     }
+}
+
+.mobile-hero{
+    display: none;
+}
+
+//Tablet Styles 
+@media (max-width: 1024px) {
+
+    .heroDiv{
+        height: 278px;
+        max-width: 514px;
+        gap: 30px;
+        h1{
+            font-size: 40px;
+            line-height: 42px;
+            letter-spacing: -0.357px;
+        }
+    }
+    .aboutContainer, .avatar{
+        max-width: 350px;
+        flex: 1;
+    }  
+    .contactBanner{
+        width: 80%;
+        margin: auto;
+        h2{
+            max-width: 300px;
+            font-size: 35px;
+
+        }
+   
+    }
+}
+
+@media(max-width: 750px){
+    .about{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        .aboutContainer, .avatar{
+            max-width: 400px;
+            min-height: 500px;
+            flex: 1;
+        }  
+    }
+
+}
+
+@media (max-width: 500px) {
+    .hero{
+        display: none;
+    
+    }
+    .mobile-hero{
+        display: block;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: fit-content ;
+        .heroImg{
+            width: 100%;
+        }
+        .heroDiv{
+            width: 100%;
+            position: relative;
+        }
+    }
+
+    .contactBanner{
+        width: 100%;
+        flex-direction: column;
+        h2{
+            max-width: 300px;
+            font-size: 35px;
+        }
+        hr{
+            display: none;
+        }
+   
+    }
+    
+    
 }

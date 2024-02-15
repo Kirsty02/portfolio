@@ -1,27 +1,13 @@
 import React, { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import gitHub from '../assets/icons/github.svg';
 import linkedIn from '../assets/icons/linkedin.svg';
 
 const Contact= () => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-    
-        // Form validation (optional)
-    
-        // Submit form data (replace with your method)
-        console.log('Submitting form data:', { name, email, message });
-    
-        // Reset form
-        setName('');
-        setEmail('');
-        setMessage('');
-      };
-
-
+    const [state, handleSubmit] = useForm("xleqblea");
+    if (state.succeeded) {
+        return  <p> email sent!</p>
+    }
     return (
         <div className="contact">
             <hr></hr>
@@ -51,22 +37,16 @@ const Contact= () => {
                 </div>
                 <div className='rightColumn '>
                     <form className="contact-form" onSubmit={handleSubmit}>
-                        <label><p className='body-1'>
-                            Name:
-                            <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
-                            </p>
-                        </label>
-                        <label>
-                            <p className='body-1'> Email:
-                            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-                            </p>
-                        </label>
-                        <label>
-                            Message:
-                            <textarea value={message} onChange={(e) => setMessage(e.target.value)} required />
-                        </label>
-                        <button className='primary-btn' type="submit">Send Message</button>
+                        <label htmlFor="email"> <p className='form-text'>Email Address</p></label>
+                        <input id="email"type="email" name="email" />
+                        <ValidationError prefix="Email" field="email"errors={state.errors} />
+                        <label htmlFor="message"><p className='form-text'>Message:</p></label>
+                        <textarea id="message"name="message"/>
+                        <ValidationError  prefix="Message"   field="message" errors={state.errors} />
+                        <button className='primary-btn'  type="submit" disabled={state.submitting}> Send Message</button>
                     </form>
+
+
                 </div>
             </div>
 
