@@ -6,8 +6,9 @@
 @import './portfolio';
 @import './contact';
 .container{
-    max-width: 1111px;
+    max-width: 1071px;
     margin: auto;
+    
 }
 
 
@@ -47,4 +48,30 @@ footer{
 .socailList{
     display: flex;
     gap: 20px;
+}
+
+.layout{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media(max-width: 500px){
+    .socailList{
+        gap: 10px;
+        padding-top: 30px;
+    }
+    nav{
+        gap: 30px;
+    }
+    footer{
+        flex-direction: column;
+        height: fit-content;
+        padding-top: 20px;
+        padding-bottom:20px;
+        nav{
+            flex-direction: column;
+        }
+    }
+        
+
 }

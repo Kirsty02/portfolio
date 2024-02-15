@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect }  from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import downArrows from '../assets/icons/down-arrows.svg';
-import avatarImg from '../assets/images/image-homepage-profile.jpg';
+import bannerImg from '../assets/images/image-homepage-hero.jpg';
 
 
 const Home = () => {
     const navigate = useNavigate();
+    const [isSmallScreen, setIsSmallScreen] = useState(false); 
 
     const gotoAbout = () => {
         navigate('/your-desired-path'); 
@@ -14,11 +15,24 @@ const Home = () => {
     const gotoContact = () => {
         navigate('/contact'); 
     };
+
+    const handleResize = () => {
+        setIsSmallScreen(window.innerWidth < 500);
+    };
+    useEffect(() => {
+        handleResize(); 
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize); 
+    }, []); 
     
 
     return (
         <div className="home">
-            <div className='container hero'>
+            {isSmallScreen ? (
+                <div className='mobile-hero'> 
+                <div> 
+                    <img className='heroImg' src={bannerImg} alt="Avatar"/>
+                </div>
                 <div className='heroDiv'> 
                     <h1> Hey, I'm Kirsty last and I love building beautiful websites</h1>
                     <button className='primary-btn'>
@@ -32,9 +46,28 @@ const Home = () => {
                         </p>
                     </button>
                 </div>
-            </div>
+                </div>
+            ) : (
+                <div className='container hero'>
+                <div className='heroDiv'> 
+                    <h1> Hey, I'm Kirsty last and I love building beautiful websites</h1>
+                    <button className='primary-btn'>
+                    <div className='btnBox'>
+                        <img src={downArrows} alt="Down Arrows" /> 
+                    </div>
+                    <p>
+                        <Link to="about" spy={true} smooth={true}>
+                            Go to About 
+                        </Link>
+                    </p>
+                    </button>
+                </div>
+                </div>
+            )}
             <div className='container about' id='about'>
-                <img className='avatar' src={avatarImg} alt="Avatar Img" /> 
+                <div className='avatar'>
+                </div>
+                
                 <div className='aboutContainer'>
                     <hr></hr>
                     <h2> About Me</h2>
@@ -55,7 +88,7 @@ const Home = () => {
             <div className='contactBanner'>
                 <h2> Interested in doing a project together?</h2> 
                 <hr></hr>
-                <button onClick={gotoContact} className='secondary-btn'>contact me </button>
+                <button onClick={gotoContact} className='secondary-btn'>CONTACT ME </button>
             </div>
         </div>
     );
