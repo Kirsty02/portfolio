@@ -26,23 +26,40 @@ nav{
     a{
         text-decoration: none;
     }
+
     .navLink{
         font-weight: 700;
     }
 }
+.icon-hamburger, .hamburger{
+    fill: $primary-blue;
+    border: none;
+    background-color: transparent;
+    display: none;
+}
+
+.icon-hamburger:hover{
+    cursor: pointer;
+    fill: $primary-cyan;
+}
+
+
 
 footer{
     background-color: $primary-grey;
- 
     width: 100%;
     height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    align-items: center;
-    color: $secondary-white;
-    padding-left: 20px;
-    padding-right: 20px;
+    .footer-div{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-items: center;
+        color: $secondary-white;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+   
 }
 
 .socailList{
@@ -55,6 +72,13 @@ footer{
     padding-right: 20px;
 }
 
+.open{
+    display: flex !important;
+}
+
+.mobile-menu{
+    display: none;
+}
 @media(max-width: 500px){
     .socailList{
         gap: 10px;
@@ -64,6 +88,9 @@ footer{
         gap: 30px;
     }
     footer{
+        height: fit-content;
+    }
+    .footer-div{
         flex-direction: column;
         height: fit-content;
         padding-top: 20px;
@@ -72,6 +99,51 @@ footer{
             flex-direction: column;
         }
     }
+
+    .normalNav{
+        display: none;
+    }
+    .icon-hamburger, .hamburger{
+        display: block;
+
+    }
+    
+    .mobile-menu{
+        height: fit-content;
+        background-color: $primary-grey;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        position: fixed;
+        top: 100px;
+        left: 10%;
+        width: 80%;
+        z-index: 998;
+        a{
+            text-decoration: none ;
+        }
+        .navLink{
+            color: $secondary-white;
+        }
+        
+        
+    }
         
 
+}
+
+.grey-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    z-index: 997;
+    display: none;
 }

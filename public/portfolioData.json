@@ -7,7 +7,8 @@
         "imageBanner": "/assets/images/audiophileBanner.png",
         "imageStatic1": "/assets/images/audiophileStatic2.png",
         "imageStatic2": "/assets/images/audiophileStatic1.png",
-        "technologies": ["React", "CSS", "JavaScript"],
+        "features": ["Responsive Web Design (React.js)", "Dynamic Product Catalogue (MongoDB)", "Interactive Shopping Cart (Redux)", "Secure Payment Processing (Stripe)", "User Navigation and Routing (React Router)", "Order Completion and Management", "Adaptive Images and Content", "Environment Variable Management (.env)"],
+        "why": "These features create a robust, secure, and user-friendly e-commerce platform. Responsive design ensures accessibility across devices, dynamic content management allows for easy updates and scalability, secure payment processing is crucial for trust and legality, and interactive UI elements enhance the overall user experience. The use of modern web technologies like React.js, Node.js, Express.js, MongoDB, and Redux supports the application's performance, security, and scalability.",
         "projectLink": "https://github.com/Kirsty02/Audiophile"
     },
     {
@@ -18,7 +19,8 @@
         "imageBanner": "/assets/images/kanbanBanner.png",
         "imageStatic1": "/assets/images/kanbanStatic1.png",
         "imageStatic2": "/assets/images/kanbanStatic2.png",
-        "technologies": ["React", "CSS", "JavaScript"],
+        "features": ["Task & Board Management (Vue.js, Laravel, MySQL)", "Dynamic and Responsive Interface (Vue.js)", "Customisable Columns (Laravel, MySQL)", "Sidebar Navigation (Vue.js)", "Light/Dark Mode (SCSS, JavaScript)"],
+        "why": "These features aim to make task management simple and efficient. Kanban's visual design, coupled with customisable workflows and dynamic user interactions, promotes greater organisation and improved project visibility. The combined technologies create a powerful, user-friendly, and highly adaptable application suited for both individual and team use.",
         "projectLink": "https://github.com/Kirsty02/Audiophile"
     }
 ]

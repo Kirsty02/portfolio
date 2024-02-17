@@ -4,9 +4,17 @@
     border: none;
     font-family: $ff-secondary;
     min-width: 200px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        text-decoration: none;
+    }
+  
 }
-
+a{
+    text-decoration: none;
+}
 .primary-btn{
     @include button_style;
     background-color: $primary-blue;
