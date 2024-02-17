@@ -30,15 +30,18 @@ const ViewProject = ({ portfolioItems }) => {
         <div className='columns'>
             <div className='leftColumn'>
                 <hr></hr>
-                <h2> Manage</h2>
-                <p> This project required me to build a fully responsive
-                     landing page to the designs provided. I used HTML5, along 
-                     with CSS Grid and JavaScript for the areas that required interactivity, 
-                     such as the testimonial slider. 
-                </p>
-                <p className='features'>Interaction Design / Front End Development </p>
-                <p className='features'>HTML / CSS / JAVASCRIPT </p>
-                <button className='secondary-btn'> VISIT WEBSITE</button>
+                <h3> Key Features</h3>
+                <p className='body-2'>{project.why} </p>
+                <div>
+                    
+                    {project.features.map((feature, index) => (
+                    <p className='features'  key={index}>{feature} </p>
+                    ))}
+
+                </div>
+                <a href={project.projectLink} target="_blank" rel="noopener noreferrer" className='secondary-btn'>
+                    <p>VISIT GUTHUB PAGE</p>
+                </a> 
                 <hr></hr>
             </div>
             <div className='rightColumn'>
@@ -52,7 +55,7 @@ const ViewProject = ({ portfolioItems }) => {
         <div className='contactBanner'>
             <h2> Interested in doing a project together?</h2> 
             <hr></hr>
-            <button onClick={gotoContact} className='secondary-btn'>contact me </button>
+            <button onClick={gotoContact} className='secondary-btn'>CONTACT ME</button>
         </div>
     </div>
   );

@@ -7,6 +7,9 @@
 .contact{
   width: 100%;
   padding:50px;
+  svg:hover{
+    fill: $primary-cyan;
+  }
   .columns{
     display: flex;
     flex-direction: column;
@@ -17,6 +20,20 @@
     }
     .leftColumn{
       min-width: 100%;
+      padding-bottom: 50px;
+    }
+    .form-text{
+      padding-bottom: 0px;
+      font-family: $ff-secondary;
+      color: $primary-grey;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .form-text-white{
+      padding-bottom: 0px;
+      font-family: $ff-secondary;
+      color: $secondary-white;
+      letter-spacing: 1px;
     }
   }
 }
@@ -26,6 +43,7 @@
     gap: 1rem;
     label {
       display: block;
+      
       width: 100%;
     }
   

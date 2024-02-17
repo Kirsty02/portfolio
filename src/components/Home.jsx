@@ -9,8 +9,8 @@ const Home = () => {
     const navigate = useNavigate();
     const [isSmallScreen, setIsSmallScreen] = useState(false); 
 
-    const gotoAbout = () => {
-        navigate('/your-desired-path'); 
+    const gotoPortfolio = () => {
+        navigate('/portfolio'); 
     };
     const gotoContact = () => {
         navigate('/contact'); 
@@ -50,7 +50,7 @@ const Home = () => {
             ) : (
                 <div className='container hero'>
                 <div className='heroDiv'> 
-                    <h1> Hey, I'm Kirsty last and I love building beautiful websites</h1>
+                    <h1> Hey, I'm Kirsty Last and I love building beautiful websites</h1>
                     <button className='primary-btn'>
                     <div className='btnBox'>
                         <img src={downArrows} alt="Down Arrows" /> 
@@ -70,18 +70,17 @@ const Home = () => {
                 
                 <div className='aboutContainer'>
                     <hr></hr>
-                    <h2> About Me</h2>
-                    <p> I’m a junior front-end developer looking for a new role
-                         in an exciting company. I focus on writing accessible HTML,
-                          using modern CSS practices and writing clean JavaScript. When 
-                          writing JavaScript code, I mostly use React, but I can adapt to 
-                          whatever tools are required. I’m based in London, UK, but I’m happy
-                           working remotely and have experience in remote teams. When I’m not
-                            coding, you’ll find me outdoors. I love
-                         being out in nature whether that’s going for a walk, run or cycling. 
-                         I’d love you to check out my work.
+                    <h2> About me</h2>
+                    <p> I'm a junior full-stack developer with a passion for building engaging and 
+                        functional web applications. I have hands-on experience with technologies like 
+                        React.js, Vue.js, Node.js, Express.js, Laravel, MongoDB, and MySQL.
+                        I'm driven by crafting accessible HTML, efficient CSS, and well-structured JavaScript.  Whether it's a 
+                        React, Vue, or a different framework, I'm adaptable and enthusiastic about learning the right tools for
+                        the job. I work well both remotely and as part of a team.
+                        When I'm not coding, I recharge outdoors. You'll likely find me hiking, running, or exploring on my
+                        bike. I invite you to take a look at my portfolio and explore my work in more detail.
                     </p>
-                    <button className='secondary-btn'> GO TO PORTFOLIO</button>
+                    <button onClick={gotoPortfolio} className='secondary-btn'> GO TO PORTFOLIO</button>
                     <hr></hr>
                 </div>
             </div>

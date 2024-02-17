@@ -23,7 +23,7 @@ const Portfolio = ({ portfolioItems }) => {
             <div className='contactBanner'>
                 <h2> Interested in doing a project together?</h2> 
                 <hr></hr>
-                <button onClick={gotoContact} className='secondary-btn'>contact me </button>
+                <button onClick={gotoContact} className='secondary-btn'>CONTACT ME</button>
             </div>
         </div>
     );
