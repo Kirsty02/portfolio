@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
                     </div>
                     <nav className='normalNav'>
                         <Link to="/"><p className='navLink'>Home</p></Link>
-                        <Link to="/portfolio"><p className='navLink'>Portfolio</p></Link>
+                        <Link to="/portfolioPage"><p className='navLink'>Portfolio</p></Link>
                         <Link to="/contact"><p className='navLink'>Contact Me</p></Link>
                     </nav>
                     <button className='hamburger' onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
                     </button>
                     <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
                         <Link to="/"><p className='navLink'>Home</p></Link>
-                        <Link to="/portfolio"><p className='navLink'>Portfolio</p></Link>
+                        <Link to="/portfolioPage"><p className='navLink'>Portfolio</p></Link>
                         <Link to="/contact"><p className='navLink'>Contact Me</p></Link>
                     </div>
                 </header>
@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
                     <nav>
                         <Link to="/"><img className='bottomLogo' src={logoWhite} alt="My Logo" /> </Link>
                         <Link to="/"><p className='bottomNavLink'>Home</p></Link>
-                        <Link to="/portfolio"><p className='bottomNavLink'>Portfolio</p></Link>
+                        <Link to="/portfolioPage"><p className='bottomNavLink'>Portfolio</p></Link>
                         <Link to="/contact"><p className='bottomNavLink'>Contact Me</p></Link>
                     </nav>
                     <div className='socailList'>

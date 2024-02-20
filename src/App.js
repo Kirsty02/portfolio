@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './components/Home';
-import Portfolio from './components/Portfolio';
+import Portfolio from './components/PortfolioPage';
 import Contact from './components/Contact';
 import ViewProject from './components/ViewProject'; 
 import './styles/style.scss'; 
+import PortfolioPage from './components/PortfolioPage';
 
 function App() {
   const [portfolioItems, setPortfolioItems] = useState([]);
@@ -31,7 +32,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/portfolio" element={<Portfolio portfolioItems={portfolioItems} />} />
+          <Route path="/portfolioPage" element={<PortfolioPage portfolioItems={portfolioItems} />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/project/:projectId" element={<ViewProject portfolioItems={portfolioItems} />} />
         </Routes>

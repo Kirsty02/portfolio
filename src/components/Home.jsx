@@ -10,7 +10,7 @@ const Home = () => {
     const [isSmallScreen, setIsSmallScreen] = useState(false); 
 
     const gotoPortfolio = () => {
-        navigate('/portfolio'); 
+        navigate('/portfolioPage'); 
     };
     const gotoContact = () => {
         navigate('/contact'); 
