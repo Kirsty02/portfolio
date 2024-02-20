@@ -31,7 +31,7 @@ function App() {
     <BrowserRouter>
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/portfolio" element={<Home />} />
           <Route path="/portfolioPage" element={<PortfolioPage portfolioItems={portfolioItems} />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/project/:projectId" element={<ViewProject portfolioItems={portfolioItems} />} />

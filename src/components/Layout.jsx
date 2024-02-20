@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
                         <Link to="/"><img src={logo} alt="My Logo" /> </Link>
                     </div>
                     <nav className='normalNav'>
-                        <Link to="/"><p className='navLink'>Home</p></Link>
+                        <Link to="/portfolio"><p className='navLink'>Home</p></Link>
                         <Link to="/portfolioPage"><p className='navLink'>Portfolio</p></Link>
                         <Link to="/contact"><p className='navLink'>Contact Me</p></Link>
                     </nav>
@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
                         <svg className='icon-hamburger' alt="Open Menu" width="16" height="15" xmlns="http://www.w3.org/2000/svg"><g  ><path d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z"/></g></svg>
                     </button>
                     <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
-                        <Link to="/"><p className='navLink'>Home</p></Link>
+                        <Link to="/portfolio"><p className='navLink'>Home</p></Link>
                         <Link to="/portfolioPage"><p className='navLink'>Portfolio</p></Link>
                         <Link to="/contact"><p className='navLink'>Contact Me</p></Link>
                     </div>
@@ -42,8 +42,8 @@ const Layout = ({ children }) => {
             <footer>
                 <div className='footer-div container'> 
                     <nav>
-                        <Link to="/"><img className='bottomLogo' src={logoWhite} alt="My Logo" /> </Link>
-                        <Link to="/"><p className='bottomNavLink'>Home</p></Link>
+                        <Link to="/portfolio"><img className='bottomLogo' src={logoWhite} alt="My Logo" /> </Link>
+                        <Link to="/portfolio"><p className='bottomNavLink'>Home</p></Link>
                         <Link to="/portfolioPage"><p className='bottomNavLink'>Portfolio</p></Link>
                         <Link to="/contact"><p className='bottomNavLink'>Contact Me</p></Link>
                     </nav>
