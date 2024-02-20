@@ -16,8 +16,10 @@ function App() {
         const response = await fetch('/portfolioData.json');
         const data = await response.json();
         setPortfolioItems(data);
+        
       } catch (error) {
         console.error('Error fetching portfolio data:', error);
+        
       }
     };
 
